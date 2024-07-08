@@ -1,0 +1,15 @@
+.logo {
+  width: 150px;
+  align-self: center;
+  margin-bottom: 40px;
+}
+.show-password {
+  display: flex;
+  align-items: center;
+}
+.err-msg {
+  font-family: 'roboto';
+  font-size: 12px;
+  color: #ff0b37;
+  margin: 0px;
+}

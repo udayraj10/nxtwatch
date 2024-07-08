@@ -1,0 +1,32 @@
+.nav-content {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .nav-content {
+    display: none;
+  }
+}
+.nav-content-mobile {
+  display: flex;
+  align-items: center;
+}
+@media screen and (min-width: 767px) {
+  .nav-content-mobile {
+    display: none;
+  }
+}
+.nav-logo {
+  width: 120px;
+}
+.theme {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.profile {
+  width: 40px;
+  margin-right: 10px;
+}
