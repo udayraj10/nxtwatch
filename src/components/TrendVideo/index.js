@@ -14,15 +14,8 @@ import {
 
 const TrendVideo = props => {
   const {trendDetails} = props
-  const {
-    id,
-    title,
-    thumbnailUrl,
-    publishedAt,
-    viewCount,
-    channel,
-  } = trendDetails
-  const {name, profileImageUrl} = channel
+  const {id, title, thumbnailUrl, publishedAt, viewCount} = trendDetails
+  const {name, profileImageUrl} = trendDetails.channel
 
   return (
     <NxtWatchContext.Consumer>

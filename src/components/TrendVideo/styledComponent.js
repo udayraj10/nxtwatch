@@ -26,7 +26,7 @@ export const TrendDetailsDesktop = styled.div`
   margin-left: 20px;
   width: 50%;
 
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 577px) {
     display: none;
   }
 `
@@ -35,7 +35,7 @@ export const TrendDetailsMobile = styled.div`
   display: flex;
   align-items: flex-start;
   margin: 15px 10px;
-  @media screen and (min-width: 576px) {
+  @media screen and (min-width: 577px) {
     display: none;
   }
 `
