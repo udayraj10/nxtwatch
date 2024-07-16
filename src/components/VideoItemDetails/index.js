@@ -10,6 +10,7 @@ import Sidebar from '../Sidebar'
 import {
   VideoItemContainer,
   VideoContainer,
+  VideoPlayer,
   VideoDetails,
   VideoTitle,
   ViewLikeSection,
@@ -162,14 +163,8 @@ class VideoItemDetails extends Component {
         const {isDark, saveVideo, savedVideos} = value
         const {videoItemDetails, isDislike, isLike} = this.state
 
-        const {
-          title,
-          videoUrl,
-          viewCount,
-          publishedAt,
-          description,
-          channel,
-        } = videoItemDetails
+        const {title, videoUrl, viewCount, publishedAt, description, channel} =
+          videoItemDetails
 
         const isPresentIndex = savedVideos.findIndex(
           video => video.id === videoItemDetails.id,
@@ -189,7 +184,9 @@ class VideoItemDetails extends Component {
 
         return (
           <VideoContainer isDark={isDark} data-testid="videoItemDetails">
-            <ReactPlayer url={videoUrl} controls width="100%" />
+            <VideoPlayer>
+              <ReactPlayer url={videoUrl} controls width="100%" height="100%" />
+            </VideoPlayer>
             <VideoDetails>
               <VideoTitle isDark={isDark}>{title}</VideoTitle>
               <ViewLikeSection>

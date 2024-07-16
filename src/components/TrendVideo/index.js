@@ -3,13 +3,13 @@ import NxtWatchContext from '../../context/NxtWatchContext'
 import {
   TrendList,
   TrendThumbnail,
-  TrendDetailsDesktop,
-  TrendDetailsMobile,
+  TrendDetailsSection,
   TrendDetails,
   TrendProfile,
   TrendTitle,
   TrendPara,
-  ViewsAndPublish,
+  Details,
+  ViewPublish,
 } from './styledComponent'
 
 const TrendVideo = props => {
@@ -26,25 +26,19 @@ const TrendVideo = props => {
           <Link to={`/videos/${id}`}>
             <TrendList>
               <TrendThumbnail src={thumbnailUrl} alt="video thumbnail" />
-              <TrendDetailsDesktop>
-                <TrendTitle isDark={isDark}>{title}</TrendTitle>
-                <TrendPara>{name}</TrendPara>
-                <ViewsAndPublish>
-                  <TrendPara>{viewCount} views</TrendPara>
-                  <TrendPara>{publishedAt}</TrendPara>
-                </ViewsAndPublish>
-              </TrendDetailsDesktop>
-              <TrendDetailsMobile>
+              <TrendDetailsSection>
                 <TrendProfile src={profileImageUrl} alt="channel logo" />
                 <TrendDetails>
                   <TrendTitle isDark={isDark}>{title}</TrendTitle>
-                  <ViewsAndPublish>
+                  <Details>
                     <TrendPara>{name}</TrendPara>
-                    <TrendPara>{viewCount} views</TrendPara>
-                    <TrendPara>{publishedAt}</TrendPara>
-                  </ViewsAndPublish>
+                    <ViewPublish>
+                      <TrendPara>{viewCount} views</TrendPara>
+                      <TrendPara>{publishedAt}</TrendPara>
+                    </ViewPublish>
+                  </Details>
                 </TrendDetails>
-              </TrendDetailsMobile>
+              </TrendDetailsSection>
             </TrendList>
           </Link>
         )

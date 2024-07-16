@@ -20,23 +20,15 @@ export const TrendThumbnail = styled.img`
   }
 `
 
-export const TrendDetailsDesktop = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-left: 20px;
-  width: 50%;
-
-  @media screen and (max-width: 577px) {
-    display: none;
-  }
-`
-
-export const TrendDetailsMobile = styled.div`
+export const TrendDetailsSection = styled.div`
   display: flex;
   align-items: flex-start;
   margin: 15px 10px;
+
   @media screen and (min-width: 577px) {
-    display: none;
+    flex-direction: column;
+    margin-left: 20px;
+    width: 50%;
   }
 `
 
@@ -44,21 +36,26 @@ export const TrendProfile = styled.img`
   width: 60px;
   height: 60px;
   margin-right: 10px;
+
+  @media screen and (min-width: 577px) {
+    display: none;
+  }
 `
 
 export const TrendDetails = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 `
 
 export const TrendTitle = styled.p`
   font-family: 'roboto';
   font-size: 20px;
   color: ${props => (props.isDark ? '#fff' : '#1e293b')};
+  margin-top: 0px;
 
   @media screen and (max-width: 576px) {
     font-size: 18px;
-    margin-top: 0px;
   }
 `
 
@@ -75,7 +72,16 @@ export const TrendPara = styled.p`
   }
 `
 
-export const ViewsAndPublish = styled.div`
+export const Details = styled.div`
   display: flex;
   align-items: center;
+
+  @media screen and (min-width: 577px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+`
+
+export const ViewPublish = styled.div`
+  display: flex;
 `

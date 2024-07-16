@@ -21,6 +21,14 @@ export const VideoContainer = styled.div`
   }
 `
 
+export const VideoPlayer = styled.div`
+  height: 80%;
+
+  @media screen and (max-width: 576px) {
+    height: 40%;
+  }
+`
+
 export const VideoDetails = styled.div`
   padding: 10px;
 

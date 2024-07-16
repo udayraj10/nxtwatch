@@ -14,14 +14,8 @@ import {
 
 const SaveVideo = props => {
   const {savedDetails} = props
-  const {
-    id,
-    title,
-    thumbnailUrl,
-    publishedAt,
-    viewCount,
-    channel,
-  } = savedDetails
+  const {id, title, thumbnailUrl, publishedAt, viewCount, channel} =
+    savedDetails
   const {name, profileImageUrl} = channel
 
   return (
